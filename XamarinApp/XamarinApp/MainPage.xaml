@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Humantiz"
+             x:Class="Humantiz.MainPage">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+
+        </Grid.RowDefinitions>
+        <Grid HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource ToolBarBackground}" Grid.Row="0"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width=".5*"/>
+
+            </Grid.ColumnDefinitions>
+            <Image Source="Logo_Humantiz.png" VerticalOptions="Center" HeightRequest="80"  Grid.Column="0"/>
+            <Image Source="avatar.png" VerticalOptions="Center" HeightRequest="50" Grid.Column="1"  x:Name="imgUser" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+              <local:CardViewGratuity   />
+              <local:CardViewGratuity   />
+
+            </StackLayout>
+            
+        </ScrollView>
+
+        <AbsoluteLayout Grid.Row="1"  x:Name="BoxViewDropDown"   >
+
+            <!--<BoxView  Color="{StaticResource ToolBarBackground}" AbsoluteLayout.LayoutBounds="1,0,200,200"   
+                AbsoluteLayout.LayoutFlags="PositionProportional" />-->
+            <Grid HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource ToolBarBackground}" Grid.Row="1"  
+                  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="1,0,150,150" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="1"  Orientation="Vertical"   BackgroundColor="{StaticResource ToolBarBackground}" >
+
+
+                    <StackLayout Grid.Column="1" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+
+                        <Label Text="Home"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></Label>
+                        <Image Source="Home.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  HeightRequest="25" WidthRequest="25"  />
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Column="1" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                        <Label Text="Log Out"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></Label>
+                        <Image Source="LogOut.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"   HeightRequest="25" WidthRequest="25"  />
+
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Last time logged in : 10.00 pm"></Label>
+
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </AbsoluteLayout>
+    </Grid>
+</ContentPage>
+

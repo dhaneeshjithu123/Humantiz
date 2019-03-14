@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.LeaveRequestFirstTabbedPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <ScrollView.Content>
+                <StackLayout BackgroundColor="GhostWhite" Orientation="Vertical" VerticalOptions="Start" Margin="0,20,0,0">
+            <Frame  BackgroundColor="#23D5AC" Margin="10,0,10,0"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" >
+
+                <StackLayout    Orientation="Horizontal"  >
+                    <Label Text="Leave Request :36" HorizontalTextAlignment="Center" WidthRequest="250"  HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Medium" 
+                           Style="{StaticResource HeaderLableStyle}"  ></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                <StackLayout    Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                    <StackLayout  BackgroundColor="#23D5AC"  Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                        <Label Text="Leave Details"  FontSize="Medium" Style="{StaticResource HeaderLableStyle}" HorizontalTextAlignment="Center" WidthRequest="220" ></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Entry    Placeholder="Employee Code " FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Picker x:Name="picker" WidthRequest="220" HorizontalOptions="CenterAndExpand"
+        Title="Select a Type" >
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Anual</x:String>
+                                    <x:String>Medical</x:String>
+                                    <x:String>Emergency</x:String>
+                                    <x:String>Anual</x:String>
+                                    <x:String>Medical</x:String>
+                                    <x:String>Emergency</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Label Text="Date of Leave :"  FontSize="Medium" Style="{StaticResource NormalLableStyle}" ></Label>
+                        <DatePicker x:Name="StartDatePicker" Format="dd-MM-YYYY" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Label Text="Date of Rejoin :"  FontSize="Medium" Style="{StaticResource NormalLableStyle}" ></Label>
+                        <DatePicker x:Name="EndDatePicker" Format="dd-MM-YYYY" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Label Text="No of Leave Days : 2"  FontSize="Medium" HorizontalOptions="CenterAndExpand" Style="{StaticResource NormalLableStyle}" ></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Entry    Placeholder="Description " FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+                    <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                        <StackLayout    Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                            <StackLayout  BackgroundColor="#23D5AC"  Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                <Label Text="Contact Details"  FontSize="Medium" Style="{StaticResource HeaderLableStyle}" HorizontalTextAlignment="Center" WidthRequest="220" ></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Contact Person" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Address" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Phone" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                        <StackLayout    Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                            <StackLayout  BackgroundColor="#23D5AC"  Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                <Label Text="Travel Details"  FontSize="Medium" Style="{StaticResource HeaderLableStyle}" HorizontalTextAlignment="Center" WidthRequest="220" ></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Label Text="Ticket Provided :"  FontSize="Medium" Style="{StaticResource NormalLableStyle}" ></Label>
+                                <Switch HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Label Text="Date of Travel :"  FontSize="Medium" Style="{StaticResource NormalLableStyle}" ></Label>
+                                <DatePicker x:Name="StartDatePicker2" Format="dd-MM-YYYY" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Label Text="Date of Retun :"  FontSize="Medium" Style="{StaticResource NormalLableStyle}" ></Label>
+                                <DatePicker x:Name="EndDatePicker2" Format="dd-MM-YYYY" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Boarding" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Destination" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Remarks " FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                        <StackLayout    Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+                            <StackLayout  BackgroundColor="#23D5AC"  Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                <Label Text="Contact Details"  FontSize="Medium" Style="{StaticResource HeaderLableStyle}" HorizontalTextAlignment="Center" WidthRequest="220" ></Label>
+                            </StackLayout>
+                            
+                            <StackLayout    Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                <Picker x:Name="picke1r" WidthRequest="220" HorizontalOptions="CenterAndExpand"
+        Title="Select a Approver" >
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>abcd</x:String>
+                                            <x:String>efg</x:String>
+                                            <x:String>higk</x:String>
+                                            <x:String>Anual</x:String>
+                                            <x:String>Medical</x:String>
+                                            <x:String>Emergency</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+
+
+                            </StackLayout>
+                      
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Department" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                                <Entry    Placeholder="Designation" FontFamily="{StaticResource Roboto_Normal}"  HeightRequest="50" WidthRequest="220" 
+                                  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                        <StackLayout  Margin="0,10,0,0"   Orientation="Horizontal" HorizontalOptions="Center" >
+                            <Button x:Name="btnSave" Text="Save"   WidthRequest="270" Style="{StaticResource ButtonStyle}"   FontFamily="{StaticResource Roboto_Bold}"
+                                        HorizontalOptions="Center" VerticalOptions="Start"
+              FontSize="{StaticResource ButtonTextFontSize}" ></Button>
+                        </StackLayout>
+
+
+                </StackLayout>
+                    </ScrollView.Content>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

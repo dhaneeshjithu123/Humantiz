@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.RequestPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="GhostWhite" VerticalOptions="Start" Margin="0,20,0,0">
+            <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                <StackLayout    Orientation="Horizontal"  >
+                    <Image Source="profile" Style="{StaticResource DashBoardImageStyle}"  WidthRequest="60" ></Image>
+                    <Label Text="Leave Request"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}" ></Label>
+                    <StackLayout.GestureRecognizers>
+
+                        <TapGestureRecognizer Command="{Binding LeaveRequestCommand}">
+
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+            <Frame  Margin="10,10,10,10"   HasShadow="True" OutlineColor="LightGray"  CornerRadius="5"
+         BackgroundColor="White">
+                <StackLayout BackgroundColor="White"  Orientation="Horizontal" >
+                    <Image Source="document"  Style="{StaticResource DashBoardImageStyle}" >
+                        
+                    </Image>
+                    <Label Text="Loan Request"  FontSize="Medium"  Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame  Margin="10,10,10,10" BackgroundColor="White"  HasShadow="True" OutlineColor="LightGray"  
+              CornerRadius="5"  >
+
+                <StackLayout  BackgroundColor="White"    Orientation="Horizontal" >
+                    <Image Source="request"  Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="Advance Salary Request"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"/>
+
+                </StackLayout>
+            </Frame>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

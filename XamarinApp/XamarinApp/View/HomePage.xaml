@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.HomePage"
+             xmlns:pages="clr-namespace:Humantiz.View">
+ 
+  <Grid VerticalOptions="FillAndExpand"
+          Padding="0"
+          HorizontalOptions="FillAndExpand"
+          BackgroundColor="Transparent">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="2"/>
+
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="2"/>
+    </Grid.ColumnDefinitions>
+        <Frame    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"    HasShadow="True" OutlineColor="LightGray"  
+                CornerRadius="5" BackgroundColor="Transparent">
+                <pages:Dashboard />
+        </Frame>
+    <Grid VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="Transparent">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="5"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="1"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="0"/>
+
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="1"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="1"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+
+      <Frame  Grid.Column="0" Grid.Row="1"  HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+        <StackLayout   Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  >
+          <Image Source="profile" Style="{StaticResource DashBoardImageStyle}" ></Image>
+                    <Label Text="Gratuity" FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}" WidthRequest="80" ></Label>
+                    <StackLayout.GestureRecognizers>
+
+                        <TapGestureRecognizer Command="{Binding Loan_Click}">
+
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+      </Frame>
+      <Frame Grid.Column="2" Grid.Row="1"  HasShadow="True" OutlineColor="LightGray"  CornerRadius="5"
+         BackgroundColor="White">
+        <StackLayout BackgroundColor="White" Grid.Row="2" Grid.Column="1"  >
+          <Image Source="document"   Style="{StaticResource DashBoardImageStyle}" >
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding LoanCommand}"></TapGestureRecognizer>
+            </Image.GestureRecognizers>
+          </Image>
+                    <Label Text="Loan" FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+        </StackLayout>
+      </Frame>
+      <Frame  BackgroundColor="White"  HasShadow="True" OutlineColor="LightGray"  Grid.Column="4" Grid.Row="1"
+              CornerRadius="5"  >
+
+        <StackLayout  >
+          <Image Source="request"  Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="Leave"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"/>
+
+        </StackLayout>
+      </Frame>
+
+      <Frame   BackgroundColor="White"  HasShadow="True" OutlineColor="LightGray"
+               Grid.Column="0" Grid.Row="3"  CornerRadius="5"  >
+        <StackLayout  >
+          <Image Source="profile"    Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="Loan"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+        </StackLayout>
+      </Frame>
+      <Frame   BackgroundColor="White"   HasShadow="True" OutlineColor="LightGray"  Grid.Column="2" Grid.Row="3"  CornerRadius="5"   >
+        <StackLayout  >
+          <Image Source="profile" Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="Loan"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+        </StackLayout>
+      </Frame>
+      <Frame   BackgroundColor="White"   HasShadow="True" OutlineColor="LightGray"  Grid.Column="4" Grid.Row="3"  CornerRadius="5"   >
+        <StackLayout  >
+          <Image Source="profile"  Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="Loan"  FontSize="Medium" Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+        </StackLayout>
+      </Frame>
+    </Grid>
+  </Grid>
+</ContentPage>

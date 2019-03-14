@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.PdfView"
+             xmlns:custom="clr-namespace:Humantiz.CustomControls">
+    <Grid>
+        <custom:CustomWebView IsPdf="True" Uri="www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"></custom:CustomWebView>
+    </Grid>
+</ContentPage>

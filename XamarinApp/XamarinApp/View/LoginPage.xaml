@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.LoginPage">
+    <ContentPage.Padding >
+        <OnPlatform x:TypeArguments ="Thickness"
+               iOS ="0, 20, 0, 0"
+               Android ="0, 0, 0, 0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <ScrollView.Content>
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0"  Grid.Row="0" Spacing="-6">
+                        <StackLayout.Resources>
+                            <ResourceDictionary>
+                                <Style TargetType="View" x:Key="MyBase">
+                                    <Style.Triggers>
+                                        <DataTrigger TargetType="View" Binding="{Binding IsLoading}" Value="True">
+                                            <Setter Property="Opacity" Value="0.3" />
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                                <!-- Define implicit styles for each control we use. -->
+                                <Style TargetType="Label" BasedOn="{StaticResource MyBase}" />
+                                <Style TargetType="Entry" BasedOn="{StaticResource MyBase}" />
+                                <Style TargetType="Button" BasedOn="{StaticResource MyBase}" />
+                            </ResourceDictionary>
+                        </StackLayout.Resources>
+                        <Grid>
+                            <Image Source="login_img.jpg" HorizontalOptions="Fill" Aspect="AspectFill" />
+                        </Grid>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="{StaticResource LoginErrorBackgroundColor}" IsVisible="{Binding IsErrorMsgDisplay}">
+                            <Image Source="error" HorizontalOptions="Center" VerticalOptions="Center" Margin="25,-5,0,0"></Image>
+                            <Label Text="LoginError" TextColor="{StaticResource TitleTextColor}" HorizontalOptions="Start" HorizontalTextAlignment="Start" HeightRequest="90" WidthRequest="300" Style="{StaticResource NormalLableStyle}"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="company" HorizontalOptions="Center" VerticalOptions="Center" Margin="50,20,10,0"></Image>
+                            <Entry    Placeholder="Company Id" FontFamily="{StaticResource Roboto_Normal}" Text="{Binding CompanyId}" HeightRequest="50" Margin="0,20,0,0" WidthRequest="220" HorizontalOptions="Center" VerticalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="user" HorizontalOptions="Center" VerticalOptions="Center" Margin="50,20,10,0"></Image>
+                            <Entry  Placeholder="Username" FontFamily="{StaticResource Roboto_Normal}" Text="{Binding UserName}" HeightRequest="50" Margin="0,20,0,0" WidthRequest="220" HorizontalOptions="Center" VerticalOptions="End"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="password" HorizontalOptions="Center" VerticalOptions="Center" Margin="50,20,10,0"></Image>
+                            <Entry Placeholder="Password" FontFamily="{StaticResource Roboto_Normal}" IsPassword="True" Text="{Binding Password}" HeightRequest="50" Margin="0,20,0,0" WidthRequest="220" HorizontalOptions="Center" VerticalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Start"  HeightRequest="50" >
+                            <Switch x:Name="rememberSwitch"  HorizontalOptions="Start"    IsToggled="{Binding IsRememberMe}" VerticalOptions="Center" Margin="50,0,0,0"  />
+                            <Label Text="Remember me"  HorizontalOptions="Center"  VerticalOptions="Center" FontFamily="{StaticResource Roboto_Normal}"  />
+                        </StackLayout>
+                        <Button x:Name="btnLogin" Text="Login" Command="{Binding Login_Click}"  WidthRequest="270" Style="{StaticResource ButtonStyle}"   FontFamily="{StaticResource Roboto_Bold}"
+                                        HorizontalOptions="Center" VerticalOptions="Start"
+               Margin="0,15,10,0" FontSize="{StaticResource ButtonTextFontSize}" IsEnabled="{Binding IsLoginBtnEnable}"></Button>
+                    </StackLayout>
+                </Grid>
+            </ScrollView.Content>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

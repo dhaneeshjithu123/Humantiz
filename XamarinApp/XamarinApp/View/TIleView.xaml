@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.View.TIleView"
+              >
+
+    <Grid VerticalOptions="FillAndExpand"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2"/>
+        </Grid.ColumnDefinitions>
+        <Image HeightRequest="250" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Source="login_img" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"  ></Image>
+        <Frame IsVisible="False" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  HeightRequest="180"  CornerRadius="2"  BackgroundColor="{StaticResource ToolBarBackground}">
+
+           
+            <!--<StackLayout  Orientation="Horizontal" VerticalOptions="Fill"     BackgroundColor="{StaticResource ToolBarBackground}"
+                      HeightRequest="250" Grid.Column="0" Grid.ColumnSpan="2">
+
+                <Image Source="login_img" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0" HeightRequest="75" WidthRequest="75"></Image>
+                -->
+            <!--<Label Text="Gratuity" TextColor="{StaticResource TitleTextColor}" HorizontalOptions="Center" HorizontalTextAlignment="Start" HeightRequest="90" WidthRequest="300" Style="{StaticResource HeaderLableStyle}"></Label>-->
+            <!--
+            </StackLayout>-->
+        </Frame>
+
+        <Grid VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Frame  Grid.Column="0" Grid.Row="1"  HasShadow="True" OutlineColor="LightGray"   CornerRadius="5" BackgroundColor="White">
+
+                <StackLayout   Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  >
+                    <Image Source="profile" Style="{StaticResource DashBoardImageStyle}" ></Image>
+                    <Label Text="GRATUITY"  Style="{StaticResource DashBoardLabelStyle}" ></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Column="2" Grid.Row="1"  HasShadow="True" OutlineColor="LightGray"  CornerRadius="5"  
+               BackgroundColor="White">
+                <StackLayout BackgroundColor="White" Grid.Row="2" Grid.Column="1"  >
+                    <Image Source="document"  Style="{StaticResource DashBoardImageStyle}" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoanCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="LOAN BALANCE"   Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame  BackgroundColor="White"  HasShadow="True" OutlineColor="LightGray"  Grid.Column="4" Grid.Row="1"
+                    CornerRadius="2"  >
+
+                <StackLayout  >
+                    <Image Source="request"  Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="LEAVE BALANCE"  Style="{StaticResource DashBoardLabelStyle}"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame   BackgroundColor="White"  HasShadow="True" OutlineColor="LightGray" 
+                     Grid.Column="0" Grid.Row="3"  CornerRadius="2"  >
+                <StackLayout  >
+                    <Image Source="profile"    Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="LOAN"  Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame   BackgroundColor="White"   HasShadow="True" OutlineColor="LightGray"  Grid.Column="2" Grid.Row="3"  CornerRadius="2"   >
+                <StackLayout  >
+                    <Image Source="profile" Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="LOAN"  Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame   BackgroundColor="White"   HasShadow="True" OutlineColor="LightGray"  Grid.Column="4" Grid.Row="3"  CornerRadius="2"   >
+                <StackLayout  >
+                    <Image Source="profile"  Style="{StaticResource DashBoardImageStyle}"></Image>
+                    <Label Text="LEAVE"  Style="{StaticResource DashBoardLabelStyle}"></Label>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

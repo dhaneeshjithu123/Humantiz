@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Humantiz.View.MainMasterPage"
+             xmlns:pages="clr-namespace:Humantiz.View">
+  <MasterDetailPage.Master>
+    <pages:MainMasterPageMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage BackgroundColor="Red" BarBackgroundColor="{StaticResource ToolBarBackground}">
+      <!--<x:Arguments>
+          <pages:TIleView />
+      </x:Arguments>-->
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
